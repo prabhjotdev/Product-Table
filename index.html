@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping list</title>
+    <style media="screen">
+
+      body {
+	      margin-left:25%;
+	      padding: 10px;
+	      text-align: center;
+	      color: darkblue;
+        width: 50%;
+      }
+      div {
+	      border-top: 1px solid darkblue;
+	      border-left: 1px solid darkblue;
+	      border-right: 3px solid darkblue;
+	      border-bottom: 3px solid darkblue;
+	      padding: 10px;
+	      display:block;
+	      margin: 0px auto;
+      }
+      #pField,#qField{
+        margin-right: 180px;
+      }
+      #mainform{
+        margin: 10px auto;
+      }
+      #lists{
+        height: 0px;
+        height: auto !important;
+      }
+      table{
+        table-layout: fixed;
+        border: 1px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form1">
+      <form id="mainform">
+        Product: <input name="name" type="text" id="product">
+        Quantity: <input name="quantity" type="number" id="quantity">
+        <input type="button" id="bt1" name="Add" value="Add" class="button" onclick="setVisibility('lists');clearInput();" >
+      </form>
+    </div>
+    <div id="userInfo">
+        <div class="fields">
+          <label id="pField">Product</label>
+          <label id="qField">Quantity</label>
+          <label id="rField">Remove</label>
+        </div>
+
+        <div id="lists">
+          <table id="table">
+
+          </table>
+        </div>
+    </div>
+    <script src="script/myScript.js"></script>
+  </body>
+</html>
